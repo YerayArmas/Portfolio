@@ -4,16 +4,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif  "Lucida Sans Unicode", Verdana, sans-serif;
   height: 100vh;
   margin: 0;
-  background: radial-gradient(
+  background-image: url('./src/back.jpg');
+  background-size: cover;
+
+  /* background: radial-gradient(
     closest-side,
     #3083ff 10%,
     #6bb5ff 50%,
     #9dc1ff 100%
-  );
+  ); 
   background-repeat: repeat;
 }
 body:hover {
@@ -23,11 +25,12 @@ body:hover {
     #6bb5ff 50%,
     #9dc1ff 100%
   );
+  */
 }
 
 .button {
   font-family: "Open Sans", sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
@@ -49,13 +52,16 @@ body:hover {
   left: 5px;
 }
 
-.name {
-  color: rgb(0, 0, 0);
+/* .name {
+  font-style:italic;
+  color: rgb(151, 14, 14);
   padding: 0.1em, 0.1em;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  text-decoration: underline;
   text-align: center;
-  margin-bottom: 40px;
-}
+  margin-bottom: 80px;
+} */
 
 .border {
   border: 2px solid rgb(255, 255, 255);
@@ -64,9 +70,47 @@ body:hover {
   height: 95vh;
   scrollbar-width: hidden;
   overflow: auto;
+  margin: 0 auto;
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.responsive-width {
+  width: 1000px;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.link-style {
+  letter-spacing: 4px;
+  text-decoration: none;
+  color: black;
+  padding-left: 10vw;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.link-style:hover {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(151, 14, 14);
+  text-decoration: underline;
+}
+
+.bottom {
+  text-align: left;
+  font-size: 22px;
+  padding-right: 6vw;
+  padding-left: 45vw;
+  padding-bottom: 5vh;
+  padding-top: 40px;
+  line-height: 1.4;
 }
 
 h1 {
@@ -76,41 +120,76 @@ h1 {
   letter-spacing: 4px;
 }
 
-.responsive-width {
-  letter-spacing: 4px;
-  margin: 0 auto;
+.a1 {
+  color: rgb(151, 14, 14);
+  font-size: 25px;
+  font-weight: bold;
   text-align: center;
-  font-size: 18px;
-  padding-left: 2vw;
-  padding-right: 10vw;
-  line-height: 1.8;
+  margin-bottom: 10px;
+  text-decoration: underline;
 }
-
-.spacer {
-  height: 8vh;
-}
-
-.spacer2 {
-  height: 4vh;
-}
-
-.link-style {
-  letter-spacing: 4px;
+.a1.no-underline {
   text-decoration: none;
-  color: black;
-  padding-left: 10vw;
+}
+.a2 {
+  font-size: 20px;
   font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 24px;
+  text-align: center;
 }
 
-.link-style:hover {
-  font-size: 24px;
+.a3 {
+  font-size: 18px;
   font-weight: bold;
-  color: rgb(0, 38, 120);
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.flag-container {
+    text-align: center;
+}
+
+.flag-container .content {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin-bottom: 100px;
+  }
+  
+  .flag-container img {
+    margin-left: 50px;
+    border-radius: 10px;
+    width: 180px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.flag-container span {
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.flag-container img:hover {
+    width: 220px;
+    height: 130px;
+}
+
+.hover {
+}
+
+.hover:hover {
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: rgba(242, 255, 213, 0.3); 
+  border-radius: 10px;
+  width: 1000px;
+  background-color: 0.1s ease;
 }
 
 .pro {
+  border-radius: 40px;
   display: flex;
   flex-direction: row;
   padding-bottom: 140px;
@@ -126,6 +205,7 @@ h1 {
 img {
   width: 45%;
   height: 45%;
+   border-radius: 10px;
 }
 
 .box {
@@ -134,15 +214,6 @@ img {
   margin-right: 10px;
 }
 
-.bottom {
-  text-align: left;
-  font-size: 20px;
-  padding-right: 6vw;
-  padding-left: 50vw;
-  padding-bottom: 5vh;
-  padding-top: 20px;
-  line-height: 1.4;
-}
 
 .contact-options {
   font-size: 22px;
@@ -150,7 +221,6 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
   margin: 0px;
 }
 
@@ -170,8 +240,6 @@ img {
   padding-right: 20px;
   display: flex;
   align-content: center
-
-
 }
 
 .contact-option {
